@@ -1,13 +1,15 @@
 import './App.css';
-import ItemListContainer from './assets/container/ItemListContainer';
-import Header from './assets/Navbar/Header';
+import ItemListContainer from './components/items/ItemListContainer';
+import Header from './components/Navbar/Header';
 
 
-function App() {
+function App({ props }) {
   return (
-    <div className='container-fluid fondo_amarillo'>
+    <div className=''>
       <Header />
-      <ItemListContainer />
+      <div className='container-fluid my-4'>
+        <ItemListContainer props={'Hello from props!'}/>
+      </div>
     </div>
   );
 }

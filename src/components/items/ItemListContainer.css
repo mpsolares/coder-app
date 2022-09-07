@@ -4,3 +4,6 @@
 h1, h2, span{
     color: #778899;
 }
+li{
+    text-decoration: none;
+}
