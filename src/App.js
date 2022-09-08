@@ -1,6 +1,7 @@
 import './App.css';
-import ItemListContainer from './components/items/ItemListContainer';
-import Header from './components/Navbar/Header';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import Header from './components/NavBar/Header';
 
 
 function App({ props }) {
@@ -8,7 +9,8 @@ function App({ props }) {
     <div className=''>
       <Header />
       <div className='container-fluid my-4'>
-        <ItemListContainer props={'Hello from props!'}/>
+      <ItemListContainer />
+      <ItemDetailContainer />
       </div>
     </div>
   );

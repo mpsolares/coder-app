@@ -1,31 +1,31 @@
 import React from "react";
-import brand from "../img/mps.svg";
-import CartWidget from "./CartWidget";
+import CartWidget from "../CartWidget/CartWidget";
+import brand from "../../img/mps.svg";
 import './Header.css';
 
 function Header() {
     return (
         <div >
-            <nav class="navbar navbar-expand-lg bg-link navbar-light ">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#"><img src={brand} alt="" height="40" className="d-inline-block align-text-center"/></a>
-                    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fas fa-bars"></i>
+            <nav className="navbar navbar-expand-lg bg-link navbar-light ">
+                <div className="container-fluid">
+                    <a className="navbar-brand" href="#"><img src={brand} alt="" height="40" className="d-inline-block align-text-center"/></a>
+                    <button className="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i className="fas fa-bars"></i>
                     </button>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
+                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li className="nav-item">
                                 <a className="nav-link link_header" href="#">About</a>
                             </li>
-                            <li class="nav-item">
+                            <li className="nav-item">
                                 <a className="nav-link link_header" href="#">Portfolio</a>
                             </li>
-                            <li class="nav-item">
+                            <li className="nav-item">
                                 <a className="nav-link link_header" href="#">Contact</a>
                             </li>
                         </ul>
-                        <div class="navbar-nav d-flex flex-row me-1">
+                        <div className="navbar-nav d-flex flex-row me-1">
                             <CartWidget />
                         </div>
                     </div>
