@@ -1,9 +1,9 @@
 import React from "react";
 import CartWidget from "../CartWidget/CartWidget";
 import brand from "../../img/mps.svg";
-import './Header.css';
+import './Navbar.css';
 
-function Header() {
+function Navbar() {
     return (
         <div >
             <nav className="navbar navbar-expand-lg bg-link navbar-light ">
@@ -35,4 +35,4 @@ function Header() {
     );
 }
 
-export default Header;
+export default Navbar;
