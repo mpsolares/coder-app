@@ -1,6 +1,6 @@
 import React from "react";
 import CartWidget from "../CartWidget/CartWidget";
-import brand from "../../img/mps.svg";
+import brand from "../img/mps.svg";
 import './Navbar.css';
 
 function Navbar() {
