@@ -8,7 +8,7 @@ function App({ props }) {
   return (
     <div className=''>
       <Navbar />
-      <div className='container-fluid my-4'>
+      <div className='container-fluid m-0 p-0'>
       <ItemListContainer />
       <ItemDetailContainer />
       </div>
