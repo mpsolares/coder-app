@@ -10,7 +10,7 @@ function App({ props }) {
       <Navbar />
       <div className='container-fluid m-0 p-0'>
       <ItemListContainer />
-      <ItemDetailContainer />
+      {/* <ItemDetailContainer /> */}
       </div>
     </div>
   );

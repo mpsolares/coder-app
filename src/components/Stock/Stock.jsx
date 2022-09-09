@@ -8,8 +8,8 @@ const Stock = ({props}) => {
     }
     return (
         <div>
-            <h1 className="promps">{props}</h1>
-           <ItemCount initial={0} stock={10} onAdd={onAdd} /> 
+          <p className="promps">{props}</p>
+          <ItemCount initial={0} stock={10} onAdd={onAdd} /> 
         </div>
     )
   }
