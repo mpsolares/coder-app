@@ -16,10 +16,10 @@ function Navbar() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <a className="nav-link link_header" href="#">About</a>
+                                <a className="nav-link link_header" href="#">Home</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link link_header" href="#">Portfolio</a>
+                                <a className="nav-link link_header" href="#">Shop</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link link_header" href="#">Contact</a>

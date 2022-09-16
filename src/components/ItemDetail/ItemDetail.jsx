@@ -9,7 +9,7 @@ return(
             <div className="detail card col-md">
                 <img className="detail_image" src={data.img} alt={data.name} />
                 <div className="card-body description">
-                    <p className=""><b>{data.name}</b></p>
+                    <p className="">{data.name}</p>
                     <p>{data.description}</p>
                 </div>
             </div>
