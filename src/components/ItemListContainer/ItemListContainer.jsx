@@ -25,12 +25,12 @@ const ItemListContainer = () => {
    },[categoryId])
    
   return(
-    <div className='container-fluid'>
+    <div className=''>
       <Navbar />
       <div className="background">
           <Carousel />    
       </div>  
-      <div className="my-3">
+      <div className="container-fluid my-4 px-4">
           <Itemlist Prod = {products}/>
       </div>
     </div>

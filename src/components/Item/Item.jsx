@@ -15,9 +15,9 @@ const Item = ({Prod}) => {
           <div className="card-body">
             <h4 className="card-title">{Prod.name}</h4>
             <p className="card-text">{Prod.description}</p>
+            <Link to={`/item/${Prod.id}`} className="btn btn-outline-secondary mt-1 mb-3">Detalle</Link>
             <p>${Prod.price}</p>
             <ItemCount initial={1} stock={10} onAdd={onAdd} /> 
-            <Link to={`/item/${Prod.id}`} className="btn btn-primary mt-2">Detalle</Link>
           </div>
         </div>
       </div>
