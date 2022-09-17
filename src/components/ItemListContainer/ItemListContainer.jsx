@@ -31,6 +31,7 @@ const ItemListContainer = () => {
           <Carousel />    
       </div>  
       <div className="container-fluid my-4 px-4">
+          <h2 className="mb-4">PRODUCT OVERVIEW</h2>
           <Itemlist Prod = {products}/>
       </div>
     </div>

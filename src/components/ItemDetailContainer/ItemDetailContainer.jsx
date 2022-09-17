@@ -19,11 +19,14 @@ export const ItemDetailContainer = () => {
     },[id])
 
     return(
-        <div className='container-fluid'>
+        <div className=''>
             <Navbar />
-            <div className="my-3">
-                <ItemDetail data={data}/>
+            <div className="cointainer-fluid mx-4">
+                <div className="my-3">
+                    <ItemDetail data={data}/>
+                </div>
             </div>
+
         </div>
     );
 }
