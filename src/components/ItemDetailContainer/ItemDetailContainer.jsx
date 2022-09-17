@@ -1,25 +1,30 @@
 import React, {useState, useEffect} from "react";
+import { useParams } from "react-router-dom";
 import ItemDetail from "../ItemDetail/ItemDetail";
-
-const Objeto = {id:1, name:"Lightweight Jacket", price: "32000", img:"https://i.postimg.cc/fThZTW8X/product-01.jpg", description: "Nulla eget sem vitae eros pharetra viverra. Nam vitae luctus ligula. Mauris consequat ornare feugiat."};
+import Navbar from "../NavBar/Navbar";
+import Mock from "../../Mock";
 
 export const ItemDetailContainer = () => {
     const [data, setData] = useState({});
+    const {id} = useParams();
 
     useEffect( () =>{
         const getData = new Promise (resolve => {
             setTimeout(() => {
-                resolve(Objeto)
+                resolve(Mock)
             }, 2000);
         });
 
-        getData.then(res => setData(res));
-    },[])
+        getData.then(res=>setData(res.find(promise => promise.id === parseInt(id))));
+    },[id])
 
     return(
-        
-        <ItemDetail data={data}/>
-
+        <div className='container-fluid'>
+            <Navbar />
+            <div className="my-3">
+                <ItemDetail data={data}/>
+            </div>
+        </div>
     );
 }
 export default ItemDetailContainer;
