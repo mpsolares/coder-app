@@ -13,10 +13,10 @@ const Item = ({Prod}) => {
         <div className="card border-0">
         <Link to={`/item/${Prod.id}`}><img className="img-fluid" src={"img/" + Prod.img} alt={Prod.name} /></Link>
           <div className="card-body">
-            <h4 className="card-title">{Prod.name}</h4>
-            <p className="card-text">{Prod.description}</p>
-            <Link to={`/item/${Prod.id}`} className="btn btn-outline-secondary mt-1 mb-3">Detalle</Link>
-            <p>${Prod.price}</p>
+            <h4 className="card-title card-p">{Prod.name}</h4>
+            <p className="card-text card-p">{Prod.description}</p>
+            <p className="card-p"><Link to={`/item/${Prod.id}`} className="btn btn-outline-secondary mt-1 mb-1">Detalle</Link></p>
+            <p className="card-p price">${Prod.price}</p>
             <ItemCount initial={1} stock={10} onAdd={onAdd} /> 
           </div>
         </div>

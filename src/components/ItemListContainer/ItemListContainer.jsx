@@ -6,6 +6,7 @@ import Mock from "../../Mock";
 import Itemlist from "../ItemList/ItemList";  
 import Carousel from "../Carousel/Carousel";
 import Navbar from "../NavBar/Navbar";
+import { List } from "../List/List";
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
@@ -31,7 +32,8 @@ const ItemListContainer = () => {
           <Carousel />    
       </div>  
       <div className="container-fluid my-4 px-4">
-          <h2 className="mb-4">PRODUCT OVERVIEW</h2>
+          <h2 className="mb-4 px-4">PRODUCT OVERVIEW</h2>
+          <List />
           <Itemlist Prod = {products}/>
       </div>
     </div>

@@ -12,3 +12,13 @@
 img{
     padding: 0;
 }
+.card-p{
+    padding-left: 10px;
+}
+.price{
+    font-weight: 600;
+    color: black;
+}
+.card-title{
+    color: black;
+}

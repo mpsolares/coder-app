@@ -17,13 +17,13 @@ function Navbar() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <NavLink className="nav-link link_header" to={"/"}>Home</NavLink>
+                                <NavLink className="nav-link link_header link" to={"/"}>Home</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link link_header" to={"/shop"}>Shop</NavLink>
+                                <NavLink className="nav-link link_header link" to={"/shop"}>Shop</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link link_header" to={"/contact"}>Contact</NavLink>
+                                <NavLink className="nav-link link_header link" to={"/contact"}>Contact</NavLink>
                             </li>
                         </ul>
                         <div className="navbar-nav d-flex flex-row me-1">

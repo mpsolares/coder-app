@@ -12,7 +12,7 @@ const Carousel = () => {
                 </div>
             </div>
             <div className="carousel-item">
-                <img src="https://i.postimg.cc/CxTWsc3q/slide-01.jpg" className="d-block w-100" alt="Man on the street"/>   
+                <img src="https://i.postimg.cc/4NTHNwhC/slide-04.jpg" className="d-block w-100" alt="Man on the street"/>   
                 <div className="carousel-caption d-none d-md-block">
                     <h2 className="text-muted">MPS Store</h2>
                     <p className="text-muted">Some representative placeholder content for the first slide</p>

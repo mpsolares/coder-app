@@ -6,3 +6,10 @@
     height: 150px;
     text-align: center;
 }
+.card-title{
+    color: black;
+}
+.price{
+    font-weight: 600;
+    color: black;
+}
