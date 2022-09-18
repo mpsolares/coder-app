@@ -16,7 +16,7 @@ export const List = () => {
               <Link className="nav-link active text-secondary text-list" to={"/men"}>Men</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active text-secondary text-list" to={"#"}>Accesories</Link>
+              <Link className="nav-link active text-secondary text-list" to={"/"}>Accesories</Link>
             </li>
           </ul>
     </div>
