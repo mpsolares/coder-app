@@ -6,7 +6,7 @@ const Carousel = () => {
     <div className="carousel-inner">
         <div className="carousel-item active">
             <img src="https://i.postimg.cc/CxTWsc3q/slide-02.jpg" className="d-block w-100" alt="Girl standing next to a blue and pink wall" />
-            <div className="carousel-caption d-flex align-items-center">
+            <div className="carousel-caption d-none d-md-block">
                 <h2 className="text-muted">MPS Store</h2>
                 <p className="text-muted">Some representative placeholder content for the first slide</p>
             </div>
@@ -19,7 +19,8 @@ const Carousel = () => {
             </div>
         </div>
     </div>
-</div>   
+</div>
+
 )
 }
 
