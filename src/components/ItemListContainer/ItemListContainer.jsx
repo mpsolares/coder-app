@@ -7,6 +7,7 @@ import Itemlist from "../ItemList/ItemList";
 import Carousel from "../Carousel/Carousel";
 import Navbar from "../NavBar/Navbar";
 import { List } from "../List/List";
+import Footer from "../Footer/Footer";
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
@@ -36,6 +37,8 @@ const ItemListContainer = () => {
           <List />
           <Itemlist Prod = {products}/>
       </div>
+      <Footer />
+   
     </div>
   )
   }

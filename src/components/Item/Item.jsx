@@ -9,7 +9,7 @@ const Item = ({Prod}) => {
     }
 
     return(
-      <div className="col-md-3">
+      <div className="col-md-3 mb-4">
         <div className="card border-0">
         <Link to={`/item/${Prod.id}`}><img className="img-fluid" src={"img/" + Prod.img} alt={Prod.name} /></Link>
           <div className="card-body">
