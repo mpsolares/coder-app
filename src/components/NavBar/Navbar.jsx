@@ -2,11 +2,12 @@ import React from "react";
 import CartWidget from "../CartWidget/CartWidget";
 import brand from "../img/mps.svg";
 import './Navbar.css';
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
     return (
         <div>
+           
             <nav className="navbar navbar-expand-lg bg-link navbar-light">
                 <div className="container-fluid">
                     <NavLink className="navbar-brand" to={"/"}><img src={brand} alt="" height="40" className="d-inline-block align-text-center"/></NavLink>
@@ -20,7 +21,7 @@ function Navbar() {
                                 <NavLink className="nav-link link_header link" to={"/"}>Home</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link link_header link" to={"/shop"}>Shop</NavLink>
+                                <NavLink className="nav-link link_header link" to={"/ListShop"}>Shop</NavLink>
                             </li>
                             <li className="nav-item">
                                 <NavLink className="nav-link link_header link" to={"/contact"}>Contact</NavLink>
@@ -28,6 +29,7 @@ function Navbar() {
                         </ul>
                         <div className="navbar-nav d-flex flex-row me-1">
                             <CartWidget />
+                        
                         </div>
                     </div>
                 </div>
