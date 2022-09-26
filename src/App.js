@@ -4,18 +4,21 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/Checkout';
+import Provider from './components/Context/Context';
 
 function App() {
   return (
-    <BrowserRouter> 
-      <Routes>
-          <Route path='/' element={<ItemListContainer/>} />
-          <Route path='/:categoryId' element={<ItemListContainer/>} />
-          <Route path='/item/:id' element={<ItemDetailContainer/>} />
-          <Route path={"/Cart"} element={<Cart />} />
-          <Route path={"/Checkout"} element={<Checkout />} />
-      </Routes>
-    </BrowserRouter>
+    <Provider>
+      <BrowserRouter> 
+        <Routes>
+            <Route path='/' element={<ItemListContainer/>} />
+            <Route path='/:categoryId' element={<ItemListContainer/>} />
+            <Route path='/item/:id' element={<ItemDetailContainer/>} />
+            <Route path={"/Cart"} element={<Cart />} />
+            <Route path={"/Checkout"} element={<Checkout />} />
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   );
 }
 

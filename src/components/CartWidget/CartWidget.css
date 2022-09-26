@@ -1,6 +1,11 @@
-button img:hover{
+iconify-icon:hover{
     color: #fff !important;
 }
-.cart:hover{
-    color: #fff !important;
+iconify-icon{
+    padding-top: 3px;
+}
+button{
+    height: 50px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }

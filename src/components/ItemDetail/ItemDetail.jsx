@@ -1,16 +1,18 @@
 import React from "react";
 import ItemCount from "../ItemCount/ItemCount";
-import '../ItemDetail/ItemDetail.css';
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import {CartContext} from "../Context/Context";
+import '../ItemDetail/ItemDetail.css';
 
 export const ItemDetail = ({data}) => {
-
+    const {addItem} = useContext(CartContext);
     const [ quantity, setQuantity ] = useState(0)
 
     const onAdd = (quantity) =>{
         console.log(`Se agrego ${quantity} unidad/es al carrito`)
-        setQuantity(quantity)
+        setQuantity(quantity);
+        addItem(data, quantity);
       }
     { quantity === 0 ? (
         <ItemCount initial={1} stock={10} onAdd={onAdd} />
@@ -25,7 +27,7 @@ return(
                 <div className="p-2 pt-0 ">
                     <img className="img-preview" src={"../img/" + data.imgDetail1} alt={data.name}/>
                 </div>
-                <div className="p-2 ">
+                <div className="p-2">
                     <img className="img-preview" src={"../img/" + data.imgDetail2} alt={data.name}/>
                 </div>
                 <div className="p-2">
