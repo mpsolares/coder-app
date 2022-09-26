@@ -1,3 +1,6 @@
 button img:hover{
-    color: #fff;
+    color: #fff !important;
+}
+.cart:hover{
+    color: #fff !important;
 }

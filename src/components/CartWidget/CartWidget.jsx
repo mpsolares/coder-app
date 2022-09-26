@@ -1,16 +1,25 @@
-import React from "react";
+import React, { useContext } from "react";
 import './CartWidget.css';
-import cart from '../img/cart.svg'
+import { Link } from "react-router-dom";
+import { CartContext } from "../Context/Context";
 
-function CartWidget() {
-  return (
-    <div className="navbar-nav d-flex flex-row me-1">
-        <button type="button" className="btn btn-outline-secondary">
-            <img src={cart} alt="carrito de compras gris" height="28"/>
-        </button>
-    </div>
-    );
+const CartWidget = () => {
+    
+    const {cartTotal} = useContext(CartContext);
+    
+    return (
+        <div className="navbar-nav d-flex flex-row me-1">
+            {(cartTotal() > 0) ?
+            <Link to={"/Cart"}>
+                <button className="btn btn-outline-secondary dropdown mt-2 mx-4" type="button" id="dropdownMenuClickableOutside" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false" title="Ir al Carrito">
+                        
+                        <iconify-icon icon="akar-icons:cart" height="30"></iconify-icon>  
+                        
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">{cartTotal()}</span>
+                    </button>
+                </Link> : ""}
+            </div>
+)
 }
-
 
 export default CartWidget;
