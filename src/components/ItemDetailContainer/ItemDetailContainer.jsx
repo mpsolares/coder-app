@@ -1,32 +1,32 @@
 import React, {useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
+import { getFirestore, doc, getDoc } from "firebase/firestore";
 import ItemDetail from "../ItemDetail/ItemDetail";
-import Navbar from "../NavBar/Navbar";
-import Mock from "../../Mock";
+
 
 export const ItemDetailContainer = () => {
-    const [data, setData] = useState({});
+
     const {id} = useParams();
+    const [item, setItem] = useState({});
+    const [loading, setLoading] = useState(true);
 
-    useEffect( () =>{
-        const getData = new Promise (resolve => {
-            setTimeout(() => {
-                resolve(Mock)
-            }, 2000);
+    useEffect(() => {
+
+        const db = getFirestore();
+        const response = doc(db, "items", id);
+
+        getDoc(response).then((snapShot) => {
+
+            if (snapShot.exists()) {
+                setItem({id:snapShot.id, ...snapShot.data()});
+                setLoading(false);
+            }            
         });
-
-        getData.then(res=>setData(res.find(promise => promise.id === parseInt(id))));
-    },[id])
+    }, [id]);
 
     return(
         <div className=''>
-            <Navbar />
-            <div className="cointainer-fluid mx-4">
-                <div className="my-3">
-                    <ItemDetail data={data}/>
-                </div>
-            </div>
-
+            {loading ? <Loading /> : <ItemDetail item={item} />}
         </div>
     );
 }
