@@ -17,7 +17,7 @@ const CartProvider = (props) => {
                 setCart([...cart, prodSeleccionado])
             }
     }
-    console.log(cart);
+    //console.log(cart);
     
     const removeItem = (id) => {
         return setCart(cart.filter(item => item.id !== id))
@@ -36,7 +36,7 @@ const CartProvider = (props) => {
 
 
     return (
-        <CartContext.Provider value={{ addItem, clear, isInCart, removeItem, totalProd, precioTotal, cart }}>
+        <CartContext.Provider value={{ addItem, clear, isInCart, removeItem, totalProd, priceTotal, cart }}>
             {props.children}
         </CartContext.Provider>
     );

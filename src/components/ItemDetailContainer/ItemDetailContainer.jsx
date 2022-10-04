@@ -27,7 +27,7 @@ export const ItemDetailContainer = () => {
 
     return(
         <div className=''>
-            {loading ? <Loading /> : <ItemDetail item={item} />}
+            {loading ? <Loading /> : <ItemDetail data={item} />}
         </div>
     );
 }

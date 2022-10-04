@@ -6,7 +6,7 @@ import Mock from "../../Mock";
 import Itemlist from '../ItemList/ItemList';
 import { List } from '../List/List';
 
-export const Shop = () => {
+export const ListShop = () => {
     const [products, setProducts] = useState([]);
   const {categoryId} = useParams();
  
@@ -33,3 +33,5 @@ export const Shop = () => {
     </div>
   )
 }
+
+

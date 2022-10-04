@@ -10,15 +10,10 @@ export const ItemDetail = ({data}) => {
     const [ quantity, setQuantity ] = useState(0)
 
     const onAdd = (quantity) =>{
-        console.log(`Se agrego ${quantity} unidad/es al carrito`)
+        //console.log(`Se agrego ${quantity} unidad/es al carrito`)
         setQuantity(quantity);
         addItem(data, quantity);
       }
-    { quantity === 0 ? (
-        <ItemCount initial={1} stock={10} onAdd={onAdd} />
-    ):(
-        <link to='/cart'>Ir al carrito</link>
-    )}
 return(
     <div className="container-fluid mt-2 pt-2">
     <div className="row mt-4 d-flex justify-content-center">
@@ -45,6 +40,7 @@ return(
             <p className="mx-2">{data.description}</p>
             <p className="mx-2 mb-3 price">${data.price}</p>
             <ItemCount initial={1} stock={10} onAdd={onAdd} />
+            { quantity > 0 ? <Link to={'/cart'} className="btn btn-outline-secondary mx-2 mb-2">Ir al carrito</Link> : "" }
         </div>
     </div>
 </div>
