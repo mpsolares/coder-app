@@ -10,7 +10,6 @@ import { Error404 } from './components/404/Error404';
 import { Cart } from './components/Cart/Cart';
 import Success from './components/Success/Success';
 import Carousel from './components/Carousel/Carousel';
-import { ListShop } from './components/ListShop/ListShop';
 
 function App() {
   return (
@@ -18,7 +17,9 @@ function App() {
           <BrowserRouter> 
             <Navbar />
             <Carousel />
-            <ListShop />
+            <div className="container-fluid my-4 px-4">
+                <h2 className="mb-4 px-4">PRODUCT OVERVIEW</h2>
+            </div>
             <Routes>
                 <Route path='/' element={<ItemListContainer/>} />
                 <Route path='/:categoryId' element={<ItemListContainer/>} />
