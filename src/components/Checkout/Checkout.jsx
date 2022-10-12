@@ -44,12 +44,12 @@ const Checkout = () => {
                             <input type="text" className="form-control" id="email" onInput={(e) => setEmail(e.target.value)} />
                         </div>
                         <div className="mb-3">
-                            <label for="telephone" className="form-label">Telephone</label>
+                            <label for="telephone" className="form-label">Phone</label>
                             <input type="text" className="form-control" id="telephone" onInput={(e) => setTelephone(e.target.value)} />
                         </div>
                         <button type="button" className="btn btn-outline-secondary dropdown" onClick={() => {sendOrder()}}>Generate Order</button>
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-4 mt-4">
                     <table className="table">
                         <tbody>
                             {cart.map(item => (
@@ -58,7 +58,7 @@ const Checkout = () => {
                                     <td className="text-start align-middle">{item.name} x {item.quantity}</td>
                                     <td className="text-end align-middle">${item.quantity * item.price}</td>
                                 </tr>
-                            ))}
+                            ))} 
                             <tr>
                                 <td colSpan={2} className="text-end fw-bold">Total</td>
                                 <td className="text-end fw-bold">${priceTotal()}</td>
