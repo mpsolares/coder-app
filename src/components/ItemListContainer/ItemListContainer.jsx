@@ -13,7 +13,7 @@ const ItemDetailsContainer = () => {
     useEffect(() => {
         const db = getFirestore();
         const itemsCollection = collection(db, "items");
-        const response = id ? query(itemsCollection, where("categoria", "==", id)) : itemsCollection;
+        const response = id ? query(itemsCollection, where("category", "==", id)) : itemsCollection;
         getDocs(response).then((snapShot) => {
             if (snapShot.size > 0) {
                 setItem(snapShot.docs.map(item => ({id:item.id, ...item.data()})));
@@ -23,7 +23,7 @@ const ItemDetailsContainer = () => {
     }, [id]);
 
     return (
-        <div className="">
+        <div className="mx-4">
             {loading ? <Loading /> : <Itemlist Prod={item} />}
         </div>
     )

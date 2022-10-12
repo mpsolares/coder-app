@@ -12,7 +12,7 @@ function Navbar() {
                 <div className="container-fluid">
                     <NavLink className="navbar-brand" to={"/"}><img src={brand} alt="" height="40" className="d-inline-block align-text-center"/></NavLink>
                     <button className="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <i className="fas fa-bars"></i>
+                    <i className="fas fa-bars" aria-hidden="true"></i>
                     </button>
 
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">

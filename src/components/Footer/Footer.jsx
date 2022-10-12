@@ -7,15 +7,14 @@ import facebook from "../img/icons/SM-RRSS-04.png";
 
 const Footer = () => {
     return (
-        <div className="row footer-backgound p-2">
+        <div className="row footer-backgound">
             <div className="col">
-                <div className="container text-white">
-                    <hr />
+                <div className="container text-white py-4">
                     <div className="row">
                         <div className="col-md-6">
                             <p></p>
                         </div>
-                        <div className="col-md-6 pb-4 text-end">
+                        <div className="col-md-6 text-end">
                             <img className="fb" src={facebook} width="23" alt="facebook" /> 
                             <img className="m-1" src={instagram} width="24" alt="instagram" /> 
                             <img className="m-1" src={youtube} width="24" alt="youtube" /> 

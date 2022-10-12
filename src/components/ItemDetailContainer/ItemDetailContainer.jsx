@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { getFirestore, doc, getDoc } from "firebase/firestore";
 import { Loading } from "../Loading/Loading";
 import ItemDetail from "../ItemDetail/ItemDetail";
+//import Carousel from "../Carousel/Carousel";
 
 
 export const ItemDetailContainer = () => {

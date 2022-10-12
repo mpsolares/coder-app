@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { useState, useContext } from "react";
 import {CartContext} from "../../Context/CartContext";
 import '../ItemDetail/ItemDetail.css';
+//import Carousel from "../Carousel/Carousel";
+//import Itemlist from "../ItemList/ItemList";
 
 export const ItemDetail = ({data}) => {
     const {addItem} = useContext(CartContext);
@@ -15,35 +17,37 @@ export const ItemDetail = ({data}) => {
         addItem(data, quantity);
       }
 return(
-    <div className="container-fluid mt-2 pt-2">
-    <div className="row mt-4 d-flex justify-content-center">
-        <div className="col-md-1 m-0 offset-md-1">
-            <div className="d-flex align-items-end flex-column mb-3">
-                <div className="p-2 pt-0 ">
-                    <img className="img-preview" src={"../img/" + data.imgDetail1} alt={data.name}/>
+    <div>
+        <div className="container-fluid mt-2 pt-2">
+        <div className="row mt-4 d-flex justify-content-center">
+            <div className="col-md-1 m-0 offset-md-1">
+                <div className="d-flex align-items-end flex-column mb-3">
+                    <div className="p-2 pt-0 ">
+                        <img className="img-preview" src={"../img/" + data.imgDetail1} alt={data.name}/>
+                    </div>
+                    <div className="p-2">
+                        <img className="img-preview" src={"../img/" + data.imgDetail2} alt={data.name}/>
+                    </div>
+                    <div className="p-2">
+                        <img className="img-preview" src={"../img/" + data.imgDetail3} alt={data.name}/>
+                    </div>
                 </div>
-                <div className="p-2">
-                    <img className="img-preview" src={"../img/" + data.imgDetail2} alt={data.name}/>
-                </div>
-                <div className="p-2">
-                    <img className="img-preview" src={"../img/" + data.imgDetail3} alt={data.name}/>
-                </div>
+                
             </div>
-            
+            <div className="col-md-5">
+                <img className="img-fluid" src={"../img/" + data.img} alt={data.name} />
+            </div>
+            <div className="col-md-5">
+                <h3 className="mx-2 card-title">{data.name}</h3>
+                <p className="mx-2"><Link to={"/" + data.category} className="text-decoration-none text-secondary"><i>{data.category}</i></Link></p>
+                <p className="mx-2">{data.description}</p>
+                <p className="mx-2 mb-3 price">${data.price}</p>
+                <ItemCount initial={1} stock={10} onAdd={onAdd} />
+                { quantity > 0 ? <Link to={'/cart'} className="btn btn-outline-secondary mx-2 mb-2">Ir al carrito</Link> : "" }
+            </div>
         </div>
-        <div className="col-md-5">
-            <img className="img-fluid" src={"../img/" + data.img} alt={data.name} />
         </div>
-        <div className="col-md-5">
-            <h3 className="mx-2 card-title">{data.name}</h3>
-            <p className="mx-2"><Link to={"/" + data.category} className="text-decoration-none text-secondary"><i>{data.category}</i></Link></p>
-            <p className="mx-2">{data.description}</p>
-            <p className="mx-2 mb-3 price">${data.price}</p>
-            <ItemCount initial={1} stock={10} onAdd={onAdd} />
-            { quantity > 0 ? <Link to={'/cart'} className="btn btn-outline-secondary mx-2 mb-2">Ir al carrito</Link> : "" }
-        </div>
-    </div>
-</div>
+    </div>   
 );
 }
 

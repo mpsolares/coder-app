@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import Mock from "../../Mock";
-import Itemlist from '../ItemList/ItemList';
+//import Itemlist from '../ItemList/ItemList';
 import { List } from '../List/List';
 
 export const ListShop = () => {
@@ -21,14 +21,14 @@ export const ListShop = () => {
      }else{
        getData.then(res=>setProducts(res));
      }
+     
    },[categoryId])
 
   return (
-    <div>   
-        <div className="container-fluid my-4 px-4">
+    <div className='mt-2 pt-2'>   
+        <div className="container-fluid mt-4 mb-2 px-4">
                 <h2 className="mb-4 px-4">PRODUCT OVERVIEW</h2>
                 <List />
-                <Itemlist Prod = {products}/>
             </div>
     </div>
   )
