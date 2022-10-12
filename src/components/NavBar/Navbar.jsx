@@ -10,7 +10,7 @@ function Navbar() {
            
             <nav className="navbar navbar-expand-lg bg-link navbar-light">
                 <div className="container-fluid">
-                    <NavLink className="navbar-brand" to={"/"}><img src={brand} alt="" height="40" className="d-inline-block align-text-center"/></NavLink>
+                    <NavLink className="navbar-brand navbar-img" to={"/"}><img src={brand} alt="" height="40" className="d-inline-block align-text-center"/></NavLink>
                     <button className="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <i className="fas fa-bars" aria-hidden="true"></i>
                     </button>
